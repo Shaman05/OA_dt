@@ -12,7 +12,7 @@
         preload : ["jquery/jquery-1.7.2.min"],
         charset: 'utf-8'
     });
-    s.use("a",function(a){
-        console.log(a)
+    s.use(["meta"],function(page){
+        page.init();
     })
 })(seajs);
