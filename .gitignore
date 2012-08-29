@@ -1,0 +1,6 @@
+Thumbs.db
+*.swp
+*.suo
+*.sln
+.idea
+*.config
