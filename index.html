@@ -5,6 +5,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link rel="stylesheet" href="./static/css/main.css" type="text/css">
+    <link rel="stylesheet" href="./static/css/themes/base/jquery.ui.all.css" type="text/css">
     <title>东恬OA</title>
 </head>
 <body>
@@ -23,49 +24,80 @@
     <div class="section-wrap">
         <div class="page-conts" id="page-1">
             <ul class="desk-item clearfix">
-                <li style="background:red">1</li>
-                <li style="background:#77f3ff">2</li>
-                <li style="background:#a5ff62">3</li>
+                <li><a class="jobs" href="#" rel="http://www.baidu.com"><span>待办工作</span></a></li>
+                <li><a class="myjob" href="#" rel="http://www.xdtit.com"><span>我的工作</span></a></li>
+                <li><a class="emails" href="#"><span>内部邮件</span></a></li>
+                <li><a class="notice" href="#"><span>单位公告</span></a></li>
             </ul>
         </div>
         <div class="page-conts" id="page-2">
             <ul class="desk-item clearfix">
-                <li style="background:#6870ff">1111</li>
-                <li style="background:#ff9a88">222</li>
-                <li style="background:#27daff">333</li>
+                <li><a class="worklog" href="#"><span>工作日志</span></a></li>
+                <li><a class="addressbook" href="#"><span>通讯薄</span></a></li>
+                <li><a class="schedule" href="#"><span>日程安排</span></a></li>
             </ul>
         </div>
         <div class="page-conts" id="page-3">
             <ul class="desk-item clearfix">
-                <li style="background:#fff934">1ad</li>
-                <li style="background:#ff23d9">2asd</li>
-                <li style="background:#ff736b">3asd</li>
+                <li><a class="jobs" href="#"><span>待办工作</span></a></li>
+                <li><a class="myjob" href="#"><span>我的工作</span></a></li>
+                <li><a class="emails" href="#"><span>内部邮件</span></a></li>
+                <li><a class="notice" href="#"><span>单位公告</span></a></li>
+                <li><a class="worklog" href="#"><span>工作日志</span></a></li>
+                <li><a class="addressbook" href="#"><span>通讯薄</span></a></li>
+                <li><a class="schedule" href="#"><span>日程安排</span></a></li>
+                <li><a class="jobs" href="#"><span>待办工作</span></a></li>
+                <li><a class="myjob" href="#"><span>我的工作</span></a></li>
+                <li><a class="emails" href="#"><span>内部邮件</span></a></li>
+                <li><a class="notice" href="#"><span>单位公告</span></a></li>
+                <li><a class="worklog" href="#"><span>工作日志</span></a></li>
+                <li><a class="addressbook" href="#"><span>通讯薄</span></a></li>
+                <li><a class="schedule" href="#"><span>日程安排</span></a></li>
             </ul>
         </div>
     </div>
 </div>
 <div class="left-menu">
-    <ul class="nav-list" id="nav-list">
-        <li><a class="desktop" href="#" title="返回桌面">桌面</a></li>
-        <li><a class="ctrlpal" href="#" title="控制面板">控制面板</a></li>
-        <li><a class="chskin" href="#" title="更换皮肤">更换皮肤</a></li>
-        <li><a class="logout" href="#" title="注销登录">注销</a></li>
+    <ul class="nav-list" id="main-nav">
+        <li><a class="desktop" href="#" title="返回主页">主页</a></li>
+        <li><a class="org" href="#" title="组织">组织</a></li>
+        <li><a class="message" href="#" title="消息">消息</a></li>
+        <li><a class="email" href="#" title="邮件">邮件</a></li>
     </ul>
-    <div class="nav-user">
-
+    <div class="nav-user clearfix">
+        <a class="kq" href="#" title="考勤">考勤</a>
+        <a class="tx" href="#" title="提醒">提醒</a>
     </div>
     <div class="nav-user">
-
+        <a class="zm" href="#" title="桌面">桌面</a>
+        <a class="zx" href="#" title="注销">注销</a>
     </div>
     <div class="nav-task">
-        <div class="nav-div">
+        <div class="nav-div" id="task-menu">
             <a class="taskmenu" href="#" title="任务菜单">任务菜单</a>
+            <div class="task-list">
+                <ul>
+                    <li><span>我的办公桌</span></li>
+                    <li><span>工作流程</span></li>
+                    <li class="sub-menu">
+                        <span>公文收发</span>
+                        <ul class="sub-menu-list">
+                            <li><a href="#">接受文件</a></li>
+                            <li><a href="#">传阅文件</a></li>
+                            <li><a href="#">接受文件浏览</a></li>
+                            <li><a href="#">传阅文件浏览</a></li>
+                            <li><a href="#">接受文件分类</a></li>
+                            <li><a href="#">传阅文件分类</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
 <div class="screen-menu" id="screen-menu">
     <div class="user">
-        <span></span>
+        <span title="用户头像"></span>
     </div>
     <ul class="screen-list clearfix" id="screen-list">
         <li class="current"><a href="#">1</a></li>
@@ -73,10 +105,13 @@
         <li><a href="#">3</a></li>
     </ul>
     <div class="screen-menu-setting">
-        <a onfocus="blur()" href="javascript:;" title="添加分页">添加分页</a>
+        <a href="javascript:;" title="添加分页">添加分页</a>
     </div>
 </div>
-<div class="footer">
+<div class="footer clearfix">
+    <div class="online">共<strong>3</strong>人在线 <strong class="iicon">0</strong></div>
+    <div class="rights">联系电话：0755-26014991 13823278411 张先生</div>
+    <div class="cominfo">深圳市兴东恬科技有限公司版权所有</div>
 </div>
 <script type="text/javascript" src="./static/js/seajs/sea.js" data-main="./static/js/main"></script>
 </body>

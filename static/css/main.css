@@ -13,6 +13,8 @@ button, input, select, textarea{font-size:100%}
 table{border-collapse:collapse; border-spacing:0}
 .clearfix{zoom:1}
 .clearfix:after{display:block; height:0; font-size:0; line-height:0; clear:both; visibility:hidden; content:''}
+a{blr:expression(this.onFocus=this.blur()); /* IE Opera */ outline:none; /* FF Opera */ }
+a:focus{-moz-outline-style: none; /* FF */ }
 
 .bg{
     height:1050px;
@@ -108,7 +110,7 @@ table{border-collapse:collapse; border-spacing:0}
     background:url(../images/menu-app-mouse-bg.png) no-repeat 0 0;
 }
 .nav-list li a,
-.nav-div a{
+.nav-div .taskmenu{
     display:block;
     height:48px;
     width:48px;
@@ -120,6 +122,27 @@ table{border-collapse:collapse; border-spacing:0}
     height:23px;
     width:60px;
     margin:0 0 7px 4px;
+}
+.nav-user a{
+    display:block;
+    float:left;
+    height:16px;
+    width:16px;
+    text-indent:-99px;
+    overflow:hidden;
+    margin:3px 6px 0;
+}
+.nav-user .kq{
+    background:url(../images/attendance.gif) no-repeat 0 0;
+}
+.nav-user .tx{
+    background:url(../images/theme.gif) no-repeat 0 0;
+}
+.nav-user .zm{
+    background:url(../images/mytable.gif) no-repeat 0 0;
+}
+.nav-user .zx{
+    background:url(../images/login.gif) no-repeat 0 0;
 }
 .nav-task{
     width:60px;
@@ -139,6 +162,15 @@ table{border-collapse:collapse; border-spacing:0}
 }
 .taskmenu{
     background:url(../images/taskmenu.png) no-repeat center;
+}
+.org{
+    background:url(../images/org.png) no-repeat center;
+}
+.message{
+    background:url(../images/message.png) no-repeat center;
+}
+.email{
+    background:url(../images/email.png) no-repeat center;
 }
 .screen-menu{
     position:absolute;
@@ -220,14 +252,138 @@ table{border-collapse:collapse; border-spacing:0}
     position:absolute;
     left:0;
     bottom:0;
-    height:30px;
+    height:18px;
+    padding-top:12px;
+    color:#2e2e2e;
     background:url(../images/menu-bottom-bg-b.png) repeat-x 0 bottom;
 }
+.online{
+    padding-left:12px;
+    float:left;
+}
+.online strong{
+    color:red;
+    margin:0 2px;
+}
+.online .iicon{
+    padding-left:18px;
+    background:url(../images/iicon.gif) no-repeat 0 1px;
+}
+.cominfo{
+    padding-right:12px;
+    float:right;
+}
+.rights{
+    float:left;
+    margin-left:30%;
+}
 
-
+/*desk*/
 .desk-item li{
     height:88px;
     width:86px;
     float:left;
     margin:0 20px 20px;
+}
+.desk-item .li-hover{
+    background:url(../images/app-mouse-bg.png) no-repeat 0 0;
+}
+.desk-item li a{
+    display:block;
+    margin-top:10px;
+    padding-top:52px;
+    background-repeat:no-repeat;
+    background-position:center 0;
+}
+.desk-item li a span{
+    display:block;
+    padding:1px 0 2px;
+    text-align:center;
+    line-height:normal;
+    margin:0 12px;
+    color:#FFF;
+    background:#666;
+    background:rgba(0,0,0,0.2);
+    border-radius:6px;
+}
+.jobs{
+    background-image:url(../images/desk/jobs.png);
+}
+.myjob{
+    background-image:url(../images/desk/myjob.png);
+}
+.emails{
+    background-image:url(../images/desk/emails.png);
+
+}
+.notice{
+    background-image:url(../images/desk/notice.png);
+}
+.worklog{
+    background-image:url(../images/desk/worklog.png);
+}
+.addressbook{
+    background-image:url(../images/desk/addressbook.png);
+}
+.schedule{
+    background-image:url(../images/desk/schedule.png);
+}
+
+/*task menu*/
+#task-menu{
+    position:relative;
+    z-index:999999;
+    width:68px;
+}
+.task-list,.sub-menu-list{
+    height:216px;
+    width:100px;
+    padding:12px 0;
+    position:absolute;
+    left:62px;
+    bottom:0;
+    display:none;
+    background:url(../images/task-menu-bg.png) no-repeat 0 0;
+}
+.task-list li{
+    position:relative;
+}
+.task-list li span,
+.sub-menu-list a{
+    display:block;
+    height:16px;
+    line-height:16px;
+    padding:2px 6px;
+    cursor:pointer;
+    margin:0 8px;
+    color:#dedede;
+    background:#666;
+    background:rgba(0,0,0,0.2);
+}
+.task-list .li-hover span,
+.sub-menu-list a:hover{
+    background:#999;
+    background:rgba(0,0,0,0.5);
+}
+.task-list .sub-menu span{
+    background-image:url(../images/sub_arrow.png);
+    background-repeat:no-repeat;
+    background-position:90% center;
+}
+.task-list .li-hover,
+.task-list .sub-menu a span{
+    background-image:none;
+}
+.sub-menu-list{
+    bottom:-20px;
+    left:98px;
+}
+body .ui-dialog .pop-window{
+    overflow:hidden;
+}
+.pop-window iframe{
+    border:none;
+    height:100%;
+    width:100%;
+    background:url(../images/loading.gif) no-repeat center;
 }
